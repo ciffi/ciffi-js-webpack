@@ -8,7 +8,7 @@ var Example = (function () {
 
 	Example.prototype.init = function () {
 
-		console.log('new Example initialiazed');
+		console.log('new Example initialized');
 
 	};
 
