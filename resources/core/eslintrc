@@ -4,7 +4,11 @@
     "commonjs": true,
     "node": true,
     "jquery": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "globals": {},
@@ -17,7 +21,9 @@
     "indent": [
       2,
       "tab",
-      {"SwitchCase":1}
+      {
+        "SwitchCase": 1
+      }
     ],
     "linebreak-style": [
       2,

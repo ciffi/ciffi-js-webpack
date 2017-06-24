@@ -1,10 +1,13 @@
 'use strict';
 
 var CiffiSettings = {
-	projectName: '@REPLACE__CONFIG@',
-	assetsPath: '@REPLACE__ASSETS@',
+    assetsPath: '@REPLACE__ASSETS@',
 	assetsPathName: '@REPLACE__ASSETS__NAME@',
-	bundle: '@REPLACE__BUNDLE__NAME@'
+	bundle: '@REPLACE__BUNDLE__NAME@',
+	devStartUrl: 'http://@REPLACE__CONFIG@.local/',
+	projectName: '@REPLACE__CONFIG@',
+	srcPathName: '@REPLACE__ASSETS__NAME@',
+	staticFolders: ['images']
 };
 
 module.exports = CiffiSettings;

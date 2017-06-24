@@ -1,30 +1,36 @@
-'use strict';
-
-/*
- *
- * replace _indexUrl variable with your development index page
- *
- * */
-var _indexUrl = 'http://@REPLACE__CONFIG@.local/';
-
+var ConfigFile = require(__dirname + '/.ciffisettings');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var _indexUrl = ConfigFile.devStartUrl;
 
 module.exports = {
 	entry: {
-		main: './@REPLACE__ASSETS__NAME@/scripts/main.js'
+		main: './' + ConfigFile.srcPathName + '/scripts/main.js'
 	},
 	output: {
-		path: '@REPLACE__ASSETS@',
+		path: __dirname + '/' + ConfigFile.assetsPath,
 		filename: '[name].js'
 	},
 	devtool: 'eval',
 	watch: true,
 	module: {
-		preLoaders: [
+		rules: [
 			{
 				test: /\.js$/,
+				enforce: 'pre',
 				loader: 'eslint-loader',
-				exclude: './node_modules'
+				exclude: __dirname + '/' + './node_modules',
+				options: {
+					configFile: './.eslintrc'
+				}
+			}, {
+				test: /\.js$/,
+				exclude: /(node_modules)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['env']
+					}
+				}
 			}, {
 				test: /\.twig$/,
 				loader: 'twig-loader'
@@ -35,8 +41,5 @@ module.exports = {
 		new OpenBrowserPlugin({
 			url: _indexUrl
 		})
-	],
-	eslint: {
-		configFile: './.eslintrc'
-	}
+	]
 };

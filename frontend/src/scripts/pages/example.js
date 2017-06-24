@@ -1,27 +1,11 @@
-'use strict';
-
-var Page = (function () {
+import Page from './allpages';
+module.exports = (function () {
 	
-	function Page(config) {
+	return class IndexPage extends Page {
 		
-		this.config = config;
-		
-		this.content = {
-			prova: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-		};
-		
-		this.onLoad = onLoad;
-		
-		return this;
-		
-	}
+		onLoad() {
+			console.log(this.data.page.route);
+		}
+	};
 	
-	function onLoad() {
-		console.log('example page loaded');
-	}
-	
-	return Page;
-	
-});
-
-module.exports = Page;
+})();

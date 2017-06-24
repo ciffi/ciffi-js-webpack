@@ -1,23 +1,18 @@
-'use strict';
-
-var Page = (function () {
+export default (function () {
 	
-	function Page(config) {
+	return class Page {
 		
-		this.config = config;
+		constructor(data) {
+			this.data = data;
+			
+			this.content = {
+				prova: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+			};
+		}
 		
-		this.onLoad = onLoad;
-		
-		return this;
-		
-	}
+		onLoad() {
+			console.log(`${this.data.page.route} page loaded`);
+		}
+	};
 	
-	function onLoad() {
-		console.log('all pages loaded');
-	}
-	
-	return Page;
-	
-});
-
-module.exports = Page;
+})();

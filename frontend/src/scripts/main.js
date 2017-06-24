@@ -1,5 +1,3 @@
-'use strict';
-
 // fastclick
 require('fastclick').attach(document.body);
 
@@ -7,4 +5,4 @@ require('fastclick').attach(document.body);
 require('@ciffi-js/device');
 
 // router
-require('ciffi-js-router').pushState(false);
+require('@ciffi-js/router').pushState(false);
