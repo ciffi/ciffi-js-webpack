@@ -7,7 +7,10 @@ var CiffiSettings = {
 	devStartUrl: 'http://@REPLACE__CONFIG@.local/',
 	projectName: '@REPLACE__CONFIG@',
 	srcPathName: '@REPLACE__ASSETS__NAME@',
-	staticFolders: ['images']
+	features: @REPLACE__FEATURES@,
+	staticFolders: ['images'],
+	stylesOutputName: 'main.css',
+	scriptsOutputName: 'main.js'
 };
 
 module.exports = CiffiSettings;

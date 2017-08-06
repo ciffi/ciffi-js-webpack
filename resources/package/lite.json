@@ -1,0 +1,39 @@
+{
+  "name": "ciffi-base-project",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ciffi"
+  },
+  "description": "Frontend Base Project - lite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciffi/ciffi-js-webpack.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ciffi/ciffi-js-webpack",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "clean-css-cli": "^4.1.2",
+    "copyfiles": "^0.2.1",
+    "eslint": "^3.4.0",
+    "eslint-loader": "^1.5.0",
+    "livereload": "^0.5.0",
+    "node-sass": "^3.9.3",
+    "open-browser-webpack-plugin": "0.0.2",
+    "postcss-cli": "^2.6.0",
+    "twig": "^1.10.4",
+    "twig-loader": "^0.3.0",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "@ciffi-js/device": "^1.0.0",
+    "@ciffi-js/router": "^1.0.0",
+    "breakpoint-sass": "^2.7.0",
+    "fastclick": "^1.0.6",
+    "jquery": "^3.1.0",
+    "reset-css": "^2.2.0"
+  }
+}
