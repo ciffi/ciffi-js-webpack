@@ -10,7 +10,8 @@ var CiffiSettings = {
 	features: @REPLACE__FEATURES@,
 	staticFolders: ['images'],
 	stylesOutputName: 'main.css',
-	scriptsOutputName: 'main.js'
+	scriptsOutputName: 'main.js',
+	defaultBuildEnv: 'local'
 };
 
 module.exports = CiffiSettings;
