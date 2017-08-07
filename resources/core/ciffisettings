@@ -1,5 +1,3 @@
-'use strict';
-
 var CiffiSettings = {
     assetsPath: '@REPLACE__ASSETS@',
 	assetsPathName: '@REPLACE__ASSETS__NAME@',
@@ -11,6 +9,7 @@ var CiffiSettings = {
 	staticFolders: ['images'],
 	stylesOutputName: 'main.css',
 	scriptsOutputName: 'main.js',
+	defaultDevEnv: 'dev',
 	defaultBuildEnv: 'local'
 };
 

@@ -8,7 +8,7 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/' + ConfigFile.assetsPath,
-		filename: '[name].js'
+		filename: ConfigFile.scriptsOutputName //'[name].js'
 	},
 	devtool: 'eval',
 	watch: true,
