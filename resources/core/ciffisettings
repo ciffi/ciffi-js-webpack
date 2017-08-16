@@ -6,7 +6,7 @@ var CiffiSettings = {
 	projectName: '@REPLACE__CONFIG@',
 	srcPathName: '@REPLACE__ASSETS__NAME@',
 	features: @REPLACE__FEATURES@,
-	staticFolders: ['images'],
+	staticFolders: ['fonts','images'],
 	stylesOutputName: 'main.css',
 	scriptsOutputName: 'main.js',
 	defaultDevEnv: 'dev',
