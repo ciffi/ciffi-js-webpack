@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ConfigFile = require(__dirname + '/.ciffisettings');
+const path = require('path');
 
 module.exports = {
 	entry: {
@@ -7,7 +8,9 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/' + ConfigFile.assetsPath,
-		filename: ConfigFile.scriptsOutputName //'[name].js'
+		publicPath: ConfigFile.assetsPath + '/',
+		filename: '[name].js',
+		chunkFilename: '[name].js'
 	},
 	module: {
 		rules: [
@@ -33,6 +36,11 @@ module.exports = {
 				loader: 'twig-loader'
 			}
 		]
+	},
+	resolve: {
+		alias: {
+			Config: path.resolve(__dirname, ConfigFile.srcPathName + '/scripts/config/config.js'),
+		}
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({

@@ -1,14 +1,17 @@
-var ConfigFile = require(__dirname + '/.ciffisettings');
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
-var _indexUrl = ConfigFile.devStartUrl;
+const ConfigFile = require(__dirname + '/.ciffisettings');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const _indexUrl = ConfigFile.devStartUrl;
+const path = require('path');
 
 module.exports = {
 	entry: {
 		main: './' + ConfigFile.srcPathName + '/scripts/main.js'
 	},
 	output: {
+		publicPath: ConfigFile.assetsPath + '/',
 		path: __dirname + '/' + ConfigFile.assetsPath,
-		filename: ConfigFile.scriptsOutputName //'[name].js'
+		filename: '[name].js',
+		chunkFilename: '[name].js'
 	},
 	devtool: 'eval',
 	watch: true,
@@ -36,6 +39,11 @@ module.exports = {
 				loader: 'twig-loader'
 			}
 		]
+	},
+	resolve: {
+		alias: {
+			Config: path.resolve(__dirname, ConfigFile.srcPathName + '/scripts/config/config.js'),
+		}
 	},
 	plugins: [
 		new OpenBrowserPlugin({
