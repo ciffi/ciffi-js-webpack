@@ -1,16 +1,17 @@
 var CiffiSettings = {
+    autoprefixer: 'last 12 versions',
     assetsPath: '@REPLACE__ASSETS@',
 	assetsPathName: '@REPLACE__ASSETS__NAME@',
 	bundle: '@REPLACE__BUNDLE__NAME@',
-	devStartUrl: 'http://@REPLACE__CONFIG@.local/',
-	projectName: '@REPLACE__CONFIG@',
-	srcPathName: '@REPLACE__ASSETS__NAME@',
-	features: @REPLACE__FEATURES@,
-	staticFolders: ['fonts','images'],
-	stylesOutputName: 'main.css',
-	scriptsOutputName: 'main.js',
+	defaultBuildEnv: 'local',
 	defaultDevEnv: 'dev',
-	defaultBuildEnv: 'local'
+	devStartUrl: 'http://@REPLACE__CONFIG@.local/',
+	features: @REPLACE__FEATURES@,
+	projectName: '@REPLACE__CONFIG@',
+	scriptsOutputName: 'main.js',
+	srcPathName: '@REPLACE__ASSETS__NAME@',
+	staticFolders: ['fonts','images'],
+	stylesOutputName: 'main.css'
 };
 
 module.exports = CiffiSettings;

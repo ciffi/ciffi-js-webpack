@@ -13,7 +13,7 @@ module.exports = {
 		filename: '[name].js',
 		chunkFilename: '[name].js'
 	},
-	devtool: 'eval',
+	devtool: 'source-map',
 	watch: true,
 	module: {
 		rules: [
