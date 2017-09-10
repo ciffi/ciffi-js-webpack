@@ -8,7 +8,7 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/' + ConfigFile.assetsPath,
-		publicPath: ConfigFile.assetsPath + '/',
+		publicPath: ConfigFile.publicPath,
 		filename: '[name].js',
 		chunkFilename: '[name].js'
 	},
