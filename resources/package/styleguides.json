@@ -34,7 +34,6 @@
   "dependencies": {
     "@ciffi-js/device": "^1.0.0",
     "breakpoint-sass": "^2.7.0",
-    "fastclick": "^1.0.6",
     "jquery": "^3.1.0",
     "reset-css": "^2.2.0"
   }

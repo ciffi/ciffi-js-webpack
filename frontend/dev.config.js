@@ -21,7 +21,7 @@ module.exports = {
 				test: /\.js$/,
 				enforce: 'pre',
 				loader: 'eslint-loader',
-				exclude: __dirname + '/' + './node_modules',
+				exclude: /(node_modules)/,
 				options: {
 					configFile: './.eslintrc'
 				}
