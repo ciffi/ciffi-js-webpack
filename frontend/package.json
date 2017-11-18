@@ -12,6 +12,7 @@
   "license": "MIT",
   "homepage": "https://github.com/ciffi/ciffi-js-webpack",
   "devDependencies": {
+    "@ciffi-js/builder": "^1.0.1",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
