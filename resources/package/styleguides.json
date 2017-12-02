@@ -12,7 +12,8 @@
   "license": "MIT",
   "homepage": "https://github.com/ciffi/ciffi-js-webpack",
   "devDependencies": {
-    "@ciffi-js/builder": "^1.0.1",
+    "@ciffi-js/builder": "^1.0.2",
+    "@ciffi-js/jsonize-path": "^1.0.4",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
@@ -37,5 +38,10 @@
     "breakpoint-sass": "^2.7.0",
     "jquery": "^3.1.0",
     "reset-css": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/ciffi-builder dev",
+    "build": "./node_modules/.bin/ciffi-builder build --env",
+    "jsonize": "./node_modules/.bin/ciffi-jsonize"
   }
 }
