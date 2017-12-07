@@ -1,17 +1,18 @@
-'use strict';
-
 var seleniumServer = require('selenium-server');
 var phantomjs = require('phantomjs-prebuilt');
 var chromedriver = require('chromedriver');
 var firefoxdriver = require('geckodriver');
 
 require('nightwatch-cucumber')({
-	featureFiles: ['./test/e2e/features'],
-	stepDefinitions: ['./test/e2e/features'],
-	openReport: true,
-	jsonReport: './test/e2e/reports/cucumber.json',
-	htmlReport: './test/e2e/reports/cucumber.html',
-	nightwatchClientAsParameter: true
+	cucumberArgs: [
+		//'--require', './test/e2e/hooks/hooks.js',
+		'--require', './test/e2e/features',
+		'--format', './node_modules/cucumber-pretty',
+		'--format', 'json:./test/e2e/reports/cucumber.json',
+		//'--format', 'snippets',
+		'./test/e2e/features'
+	],
+	nightwatchOutput: false
 });
 
 module.exports = {

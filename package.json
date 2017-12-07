@@ -1,6 +1,6 @@
 {
   "name": "ciffi-js-webpack",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "author": {
     "name": "Ciffi"
   },
@@ -10,5 +10,11 @@
     "url": "git+https://github.com/ciffi/ciffi-js-webpack.git"
   },
   "license": "ISC",
-  "homepage": "https://github.com/ciffi/ciffi-js-webpack"
+  "homepage": "https://github.com/ciffi/ciffi-js-webpack",
+  "bin": {
+    "ciffi-js-webpack": "./main.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
 }

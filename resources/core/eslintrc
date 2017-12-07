@@ -11,7 +11,9 @@
     "sourceType": "module"
   },
   "extends": "eslint:recommended",
-  "globals": {},
+  "globals": {
+    "System": false
+  },
   "rules": {
     "no-console": 0,
     "strict": [
