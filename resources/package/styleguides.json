@@ -22,6 +22,7 @@
     "copyfiles": "^1.2.0",
     "eslint": "^4.12.1",
     "eslint-loader": "^1.9.0",
+    "hard-source-webpack-plugin": "^0.5.11",
     "jsdoc": "^3.5.5",
     "kss": "^2.4.0",
     "livereload": "^0.6.3",

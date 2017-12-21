@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const ConfigFile = require(__dirname + '/.ciffisettings');
 const path = require('path');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -43,6 +44,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		new HardSourceWebpackPlugin(),
 		new webpack.optimize.UglifyJsPlugin({
 			sourceMap: false,
 			comments: false
