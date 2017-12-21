@@ -2,6 +2,7 @@ const ConfigFile = require(__dirname + '/.ciffisettings');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const _indexUrl = ConfigFile.devStartUrl;
 const path = require('path');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -46,6 +47,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		new HardSourceWebpackPlugin(),
 		new OpenBrowserPlugin({
 			url: _indexUrl
 		})
