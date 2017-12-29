@@ -9,6 +9,11 @@ import Config from 'Config';
 
 console.log(Config);
 
+// react component
+import List from './components/list.jsx';
+
+new List('.js-config-widget', Config);
+
 // lazy-load module example - open network in developers tools
 setTimeout(function () {
 	System.import(

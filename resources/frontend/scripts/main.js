@@ -6,7 +6,7 @@ import Config from 'Config';
 
 console.log(Config);
 
-// lazy-load module example - open network/hrx in developers tools
+// lazy-load module example - open network in developers tools
 setTimeout(function () {
 	System.import(
 		/* webpackChunkName: 'human' */
