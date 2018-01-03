@@ -6,6 +6,8 @@ module.exports = (function () {
 	
 	return new function CheckUpdate() {
 		
+		this.newVersion = 'latest';
+		
 		this.check = (callback) => {
 			let _processNewVersion = 'npm info ' + _package.name + ' version';
 			let _newVersion;
@@ -30,8 +32,12 @@ module.exports = (function () {
 			_process.stdout.on('data', (path) => {
 				let _modulePath = path.trim() + '/lib/node_modules/ciffi';
 				
-				let _process = 'cd ' + _modulePath + ' && npm i ' + _package.name + '@' + this.newVersion;
-				addUpdateProcessListeners(exec(_process), callback);
+				let _process = exec('cd ' + _modulePath + ' && npm i ' + _package.name + '@' + this.newVersion);
+				addUpdateProcessListeners(_process, () => {
+					callback({
+						text: chalk.yellow('🤟 Frontend base project updated')
+					});
+				});
 			});
 		};
 	};
@@ -69,12 +75,12 @@ module.exports = (function () {
 	
 	function addUpdateProcessListeners(process, successCallback) {
 		process.stdout.on('data', function (res) {
-			console.log(res);
+			// console.log(res);
 		});
 		
 		process.stderr.on('data', function (res) {
-			console.log(chalk.red('please contact ciffi - bad bad bad!!'));
-			console.log(res);
+			// console.log(chalk.red('please contact ciffi - bad bad bad!!'));
+			// console.log(res);
 		});
 		
 		process.on('close', function (res) {
