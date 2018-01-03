@@ -101,9 +101,9 @@ export default (function () {
 			
 			let _mountPoint = document.querySelector(mountPoint);
 			
-			if (_mountPoint) {
+			try {
 				render(<ListWidget items={items}/>, _mountPoint);
-			} else {
+			} catch (err) {
 				console.log(`can't find mount point DOM element -- "${mountPoint}"`);
 			}
 		}
