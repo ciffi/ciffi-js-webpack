@@ -9,7 +9,7 @@ module.exports = {
 		main: './' + ConfigFile.srcPathName + '/scripts/main.js'
 	},
 	output: {
-		publicPath: ConfigFile.assetsPath + '/',
+		publicPath: ConfigFile.publicPath,
 		path: __dirname + '/' + ConfigFile.assetsPath,
 		filename: '[name].js',
 		chunkFilename: '[name].js'
