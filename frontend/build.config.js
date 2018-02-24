@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ConfigFile = require(__dirname + '/.ciffisettings');
 const path = require('path');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
@@ -29,7 +29,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env']
+                        presets: ['env', 'react', 'es2015', 'stage-0']
 					}
 				}
 			}, {
@@ -54,9 +54,11 @@ module.exports = {
 	},
 	plugins: [
 		new HardSourceWebpackPlugin(),
-		new webpack.optimize.UglifyJsPlugin({
-			sourceMap: false,
-			comments: false
-		})
+        new UglifyJSPlugin({
+            uglifyOptions: {
+                sourceMap: false,
+                comments: false
+            }
+        })
 	]
 };

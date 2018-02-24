@@ -26,13 +26,6 @@
       2,
       "safe"
     ],
-    "indent": [
-      2,
-      "tab",
-      {
-        "SwitchCase": 1
-      }
-    ],
     "linebreak-style": [
       2,
       "unix"
