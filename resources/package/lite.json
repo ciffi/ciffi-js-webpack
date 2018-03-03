@@ -31,6 +31,7 @@
     "node-sass": "^4.7.2",
     "open-browser-webpack-plugin": "0.0.5",
     "postcss-cli": "^4.1.1",
+    "prettier": "^1.11.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "twig": "^1.10.5",
@@ -49,6 +50,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/ciffi-builder dev",
     "build": "./node_modules/.bin/ciffi-builder build --env",
-    "jsonize": "./node_modules/.bin/ciffi-jsonize"
+    "jsonize": "./node_modules/.bin/ciffi-jsonize",
+    "prettier": "./node_modules/.bin/prettier --write --single-quote '**/*.{jsx,js,json,scss}'"
   }
 }

@@ -39,6 +39,7 @@
     "open-browser-webpack-plugin": "0.0.5",
     "phantomjs-prebuilt": "^2.1.16",
     "postcss-cli": "^4.1.1",
+    "prettier": "^1.11.1",
     "sass-loader": "^6.0.6",
     "selenium-chromedriver": "0.0.2",
     "selenium-server": "^3.8.1",
@@ -61,6 +62,7 @@
     "dev": "./node_modules/.bin/ciffi-builder dev",
     "build": "./node_modules/.bin/ciffi-builder build --env",
     "jsonize": "./node_modules/.bin/ciffi-jsonize",
+    "prettier": "./node_modules/.bin/prettier --write --single-quote '**/*.{jsx,js,json,scss}'",
     "test-e2e": "./node_modules/.bin/nightwatch -c ./test/e2e/config.js && node ./test/e2e/generate-report.js || node ./test/e2e/generate-report.js",
     "test-e2e-chrome": "./node_modules/.bin/nightwatch -c ./test/e2e/config.js --env chrome && node ./test/e2e/generate-report.js || node ./test/e2e/generate-report.js",
     "test-e2e-firefox": "./node_modules/.bin/nightwatch -c ./test/e2e/config.js --env firefox && node ./test/e2e/generate-report.js || node ./test/e2e/generate-report.js"
