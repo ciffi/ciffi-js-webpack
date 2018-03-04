@@ -5,6 +5,7 @@ const path = require('path');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     entry: {
         main: './' + ConfigFile.srcPathName + '/scripts/main.js'
     },

@@ -28,11 +28,11 @@
     "cucumber": "^3.1.0",
     "cucumber-html-reporter": "^3.0.4",
     "cucumber-pretty": "0.0.5",
-    "eslint": "^4.12.1",
-    "eslint-loader": "^1.9.0",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.7.0",
     "geckodriver": "^1.10.0",
-    "hard-source-webpack-plugin": "^0.5.11",
+    "hard-source-webpack-plugin": "^0.6.1",
     "jsdoc": "^3.5.5",
     "kss": "^2.4.0",
     "livereload": "^0.6.3",
@@ -52,7 +52,8 @@
     "twig": "^1.10.5",
     "twig-loader": "^0.3.1",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^3.10.0"
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   },
   "dependencies": {
     "@ciffi-js/device": "^1.0.2",
