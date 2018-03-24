@@ -39,7 +39,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'es2015', 'stage-0']
+            presets: ['env', 'react', 'es2017', 'stage-0'],
+            plugins: ['transform-runtime']
           }
         }
       }, {
@@ -47,7 +48,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'es2015', 'stage-0']
+            presets: ['env', 'react', 'es2017', 'stage-0'],
+            plugins: ['transform-runtime']
           }
         }
       }, {
