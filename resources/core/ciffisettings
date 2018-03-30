@@ -10,6 +10,8 @@ var CiffiSettings = {
 	projectName: '@REPLACE__CONFIG@',
 	publicPath: './static/',
 	scriptsOutputName: 'main.js',
+	serverConfig: 'server.config.js',
+	serverPublicPath: '../public',
 	srcPathName: '@REPLACE__ASSETS__NAME@',
 	staticFolders: ['fonts','images'],
 	stylesOutputName: 'main.css'

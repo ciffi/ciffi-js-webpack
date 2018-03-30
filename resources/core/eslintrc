@@ -10,7 +10,10 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": "eslint:recommended",
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
   "globals": {
     "System": false
   },

@@ -33,7 +33,6 @@
     "kss": "^2.4.0",
     "livereload": "^0.6.3",
     "node-sass": "^4.7.2",
-    "open-browser-webpack-plugin": "0.0.5",
     "postcss-cli": "^4.1.1",
     "prettier": "^1.11.1",
     "sassdoc": "^2.5.0",

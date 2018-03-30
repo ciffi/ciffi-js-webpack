@@ -1,6 +1,4 @@
 const ConfigFile = require(__dirname + '/.ciffisettings');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-const _indexUrl = ConfigFile.devStartUrl;
 const path = require('path');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
@@ -24,7 +22,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loaders: [{
+          loader: 'style-loader',
+          options: {
+            insertAt: 'top'
+          }
+        }, 'css-loader', 'sass-loader']
       }, {
         test: /\.js$/,
         enforce: 'pre',
@@ -64,9 +67,6 @@ module.exports = {
     }
   },
   plugins: [
-    new HardSourceWebpackPlugin(),
-    new OpenBrowserPlugin({
-      url: _indexUrl
-    })
+    new HardSourceWebpackPlugin()
   ]
 };

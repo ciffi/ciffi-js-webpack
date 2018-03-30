@@ -38,7 +38,6 @@
     "nightwatch": "^0.9.19",
     "nightwatch-cucumber": "^8.2.10",
     "node-sass": "^4.7.2",
-    "open-browser-webpack-plugin": "0.0.5",
     "phantomjs-prebuilt": "^2.1.16",
     "postcss-cli": "^4.1.1",
     "prettier": "^1.11.1",
